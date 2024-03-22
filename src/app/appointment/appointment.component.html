@@ -1,5 +1,15 @@
-<p>appointment works!</p>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
-<mat-card>
-  <mat-card-content>Simple card</mat-card-content>
-</mat-card>
+<section>
+  <!-- <div class="example-button-row">
+    <button mat-raised-button color="primary">Add Appintment</button>
+  </div>
+</section> -->
+<!-- <div>
+  <full-calendar [options]="calendarOptions">
+    <ng-template #eventContent let-arg>
+      <b>{{arg.timeText}}</b>
+      <i>{{arg.event.title}}</i>
+    </ng-template>
+  </full-calendar>
+</div> -->
+<button mat-raised-button (click)="openAppointmentForm()">Add Appointment</button>
+<full-calendar [options]="calendarOptions"></full-calendar>
