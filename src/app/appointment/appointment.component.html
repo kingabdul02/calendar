@@ -1,15 +1,13 @@
-<section>
-  <!-- <div class="example-button-row">
-    <button mat-raised-button color="primary">Add Appintment</button>
+@if (!preloader) {
+  <div>
+    <button style="float: right; margin-right: 70px;" mat-raised-button (click)="openAppointmentForm()" color="accent">Add Appointment</button>
+    <div class="container" style="padding: 70px;">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
   </div>
-</section> -->
-<!-- <div>
-  <full-calendar [options]="calendarOptions">
-    <ng-template #eventContent let-arg>
-      <b>{{arg.timeText}}</b>
-      <i>{{arg.event.title}}</i>
-    </ng-template>
-  </full-calendar>
-</div> -->
-<button mat-raised-button (click)="openAppointmentForm()">Add Appointment</button>
-<full-calendar [options]="calendarOptions"></full-calendar>
+}
+@else {
+  <div class="preloader-container">
+    <mat-spinner color="accent"></mat-spinner>
+  </div>
+}

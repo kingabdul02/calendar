@@ -26,8 +26,8 @@ export class AppointmentFormComponent {
     private fb: FormBuilder
   ) {
     this.appointmentForm = this.fb.group({
-      title: '',
-      date: ''
+      title: new FormControl('', [Validators.required]),
+      date: new FormControl('', [Validators.required])
     });
   }
 
